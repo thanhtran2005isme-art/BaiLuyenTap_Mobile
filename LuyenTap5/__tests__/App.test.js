@@ -1,4 +1,5 @@
 import React from "react";
+import {Text} from "react-native";
 import ReactTestRenderer from "react-test-renderer";
 import App from "../App";
 
@@ -9,5 +10,5 @@ test("renders Hello React Native", async () => {
     tree = ReactTestRenderer.create(<App />);
   });
 
-  expect(tree.root.findByType("Text").props.children).toBe("Hello React Native");
+  expect(tree.root.findByType(Text).props.children).toBe("Hello React Native");
 });
